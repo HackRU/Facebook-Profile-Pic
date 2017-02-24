@@ -1,6 +1,6 @@
-# technify
+# Hack RU
 
-Check out [Technica](https://gotechnica.org), an all-ladies hackathon. They've been making these sweet profile pictures and I thought I'd make a quick script that automates the process.
+Check out [Hach RU](http://www.hackru.org//), a 24-hour hackathon at Rutgers University. They've been making these sweet profile pictures and I thought I'd make a quick script that automates the process.
 
 Here's a [demo](http://technify.herokuapp.com)
 
