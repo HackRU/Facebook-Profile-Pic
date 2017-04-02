@@ -10,19 +10,35 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <style>
+
+    	@font-face {
+    		font-family: CircularStd;
+    		src: url(sansation_bold.woff);
+    		font-weight: bold;
+		}
+		
       body {
-        background-color: rgba(0, 255, 255, .2);
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #30a36a;
+        font-family: "CircularStd", Helvetica, Arial, sans-serif;
         line-height:1.5em;
         color: #232323;
         -webkit-font-smoothing: antialiased;
         text-align: center;
       }
 
-      h1, h2, h3 {
+      img {
+      	height: 300px;
+      	width: auto;
+      	text-align: center;
+      	margin: 0 auto;
+      	padding: 50px;
+      }
+
+      h1, h2, h3 , h4, p{
         text-align: center;
         padding: 0px;
         margin: 0;
+        color: #f9f9f9;
       }
 
       .container {
@@ -35,9 +51,27 @@
       }
 
       a {
-        color: #ffb1dc;
+        color: #000000;
         font-size: 1.1em;
       }
+
+      a:hover{
+      	color: #000000;
+      }
+
+   .btn-primary{
+      	background-color: #f9f9f9;
+      	color: #30a36a;
+      	border-color: #30a36a;
+      	font-weight: 800;
+      }
+
+    .btn-primary:hover{
+    	background-color: #000000;
+    	color: #30a36a;
+    	border-color: #30a36a;
+
+    }
 
     </style>
   </head>
@@ -45,15 +79,17 @@
   <body>
 
     <div class="container">
-      <h1>Hack RU</h1>
-      <h3>Upload an image to technify it! Make sure its a JPG, JPEG, or PNG!</h3>
-      <p>Make sure to check out the <a href="http://www.hackru.org//">Hack RU</a>!</p>
+      <img src="hackRU_SP17_logo (white).png" >
+      <br>
+      <h3>Show the world that you're going to HackRU! </h3> <br><h4>Upload an image to add the HackRU filter to it! Make sure its a JPG, JPEG, or PNG. Use square images for best results</h4>
+      <br>
+      <p>And don't forget to check out <a href="http://www.hackru.org//">Hack RU</a>!</p>
       <form id="formupload" class="form-inline" role="form" action="technify" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label for="imagefile">Choose an image</label>
           <input type="file" name="imagefile" id="imagefile">
         </div>
-        <input type="submit" class="btn btn-primary" value="Technify!" id="technify"></input>
+        <input type="submit" class="btn btn-primary" value="Add Filter!" id="technify"></input>
       </form>
     </div>
 
