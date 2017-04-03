@@ -61,7 +61,7 @@ def process_image(img):
 def index():
     return render_template('index.html')
 
-@app.route('/technify', methods=['POST'])
+@app.route('/hackru', methods=['POST'])
 def classify_upload():
   try:
     #get the image from the request
