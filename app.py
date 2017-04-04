@@ -61,7 +61,7 @@ def process_image(img):
 def index():
     return render_template('index.html')
 
-@app.route('/templates/<path>')(lambda p: send_from_directory("templates", p))
+app.route('/templates/<path>')(lambda p: send_from_directory("templates", p))
 
 @app.route('/hackru', methods=['POST'])
 def classify_upload():
