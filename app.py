@@ -37,7 +37,7 @@ def process_image(img):
     #ratio of each pixel is 1:2 (image:mask)
     #tweak this for different colorings
     im = 1.0
-    mm = 2.0
+    mm = 1.0
     #the higher b, the higher the brightness
     b = .3
     #create RGBs
