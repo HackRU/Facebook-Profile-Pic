@@ -1,7 +1,7 @@
 from PIL import Image, ImageChops, ImageEnhance
 import requests
 import os
-from flask import Flask, redirect, jsonify, render_template, request, send_file
+from flask import Flask, redirect, jsonify, render_template, request, send_file, send_from_directory
 import werkzeug
 import datetime
 import uuid
@@ -60,6 +60,10 @@ def process_image(img):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/templates/<path:path>')
+def serve_static(path):
+    return send_from_directory("templates", path)
 
 @app.route('/hackru', methods=['POST'])
 def classify_upload():
