@@ -1,16 +1,13 @@
-# Hack RU
+HackHERS
 
-Check out [Hach RU](http://www.hackru.org//), a 24-hour hackathon at Rutgers University. They've been making these sweet profile pictures and I thought I'd make a quick script that automates the process.
+Check out HackHERS(http://hackhers.us), an all women hackathon in Rutgers University, NJ.
 
-Here's a [demo](http://technify.herokuapp.com)
+This project is forked from AlexEKoren/Technify.
 
-## Setup
-```
+Setup
+
 pip install -r requirements.txt
-```
+Running the app
 
-## Running the app
-```
 python app.py
-```
-Runs on [http://localhost:5000](http://localhost:5000) by default.
+Runs on http://localhost:5000 by default.
