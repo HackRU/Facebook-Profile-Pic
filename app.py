@@ -31,7 +31,7 @@ def process_image(img):
 def index():
     return render_template('index.html')
 
-@app.route('/hackhers-2017-filter', methods=['POST'])
+@app.route('/hackru', methods=['POST'])
 def classify_upload():
   try:
     #get the image from the request
@@ -60,7 +60,7 @@ def classify_upload():
   #process the image
   resultFilename = process_image(image)
   #send it back
-  return send_file(resultFilename, mimetype='image/png', as_attachment=True, attachment_filename='dianofy.png')
+  return send_file(resultFilename, mimetype='image/png', as_attachment=True, attachment_filename='hackrued.png')
 
 if __name__ == '__main__':
   port = int(os.environ.get("PORT", 5000))
