@@ -11,7 +11,7 @@ app = Flask(__name__)
 ALLOWED_IMAGE_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 def process_image(img):
-  BLEND_PCT = 0.6
+  BLEND_PCT = 0.45
 
   #open up the mask
   logo = Image.open('mask.png')
@@ -38,7 +38,9 @@ def process_image(img):
   #put in gradient
   graded = Image.blend(img, gradient, BLEND_PCT)
   #then the logo
-  graded.paste(logo, (0, 0) + logo.size, logo)
+  logo_bot_right = map(lambda x: x * .95, graded.size)
+  logo_top_left = map(lambda x, y: x - y, logo_bot_right, logo.size)
+  graded.paste(logo, map(int, logo_top_left + logo_bot_right), logo)
   graded.save(filename, 'PNG')
 
   #send it back
@@ -76,5 +78,5 @@ def classify_upload():
   return send_file(resultFilename, mimetype='image/png', as_attachment=True, attachment_filename='hackrued.png')
 
 if __name__ == '__main__':
-  port = int(os.environ.get("PORT", 8080))
+  port = int(os.environ.get("PORT", 8000))
   app.run(host='0.0.0.0', debug=True, port=port)
