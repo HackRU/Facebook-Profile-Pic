@@ -26,7 +26,7 @@ def process_image(img):
   logo_width = min(img.size) / 4
   logo_aspect = float(logo.size[1]) / logo.size[0]
   logo_size = (logo_width, logo_aspect * logo_width)
-  logo = logo.resize(map(int, logo_size))
+  logo = logo.resize(map(int, logo_size), Image.ANTIALIAS)
 
   #make sure our image has alpha channel
   img = img.convert('RGBA')
