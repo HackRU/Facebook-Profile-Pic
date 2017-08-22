@@ -32,16 +32,20 @@
         background-size: cover;
         font-family: "CircularStd", Helvetica, Arial, sans-serif;
         line-height:1.5em;
-        color: #232323;
+        color: white;
         -webkit-font-smoothing: antialiased;
         text-align: center;
+      }
+
+      label{
+        color: white;
       }
 
       img {
           height: 300px;
           width: auto;
           text-align: center;
-          margin: 0 auto;
+          margin: 0 0 0 -30px;
           padding: 50px;
       }
 
@@ -62,26 +66,24 @@
       }
 
       a {
-          color: #000000;
-          font-size: 1.1em;
+          color: #7b4397;
+          font-weight: 900;
       }
 
       a:hover{
-          color: #000000;
+          color: #dc2430;
       }
 
       .btn-primary{
-          background-color: #f9f9f9;
-          color: #30a36a;
-          border-color: #30a36a;
+          background-color: #dc2430;
+          color: white;
           font-weight: 800;
+          border: none;
       }
 
       .btn-primary:hover{
-          background-color: #000000;
-          color: #30a36a;
-          border-color: #30a36a;
-
+          background-color: #7b4397;
+          color: white;
       }
 
     </style>
@@ -90,11 +92,11 @@
   <body>
 
     <div class="container">
-      <img src="logo.png" >
+      <img src="templates/logo.png" >
       <br>
       <h3>Show the world that you're going to HackRU! </h3> <br><h4>Upload an image to add the HackRU filter to it! Make sure its a JPG, JPEG, or PNG. Use square images for best results</h4>
       <br>
-      <p>And don't forget to check out <a href="http://www.hackru.org//">Hack RU</a>!</p>
+      <h2>And don't forget to check out <a href="http://www.hackru.org//">Hack RU</a>!</h2>
       <form id="formupload" class="form-inline" role="form" action="hackru" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <label for="imagefile">Choose an image</label>

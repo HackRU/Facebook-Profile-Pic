@@ -1,7 +1,7 @@
 from PIL import Image, ImageChops, ImageEnhance, ImageOps
 import requests
 import os
-from flask import Flask, redirect, jsonify, render_template, request, send_file
+from flask import Flask, redirect, jsonify, render_template, request, send_file, send_from_directory
 import werkzeug
 import datetime
 import uuid
@@ -76,6 +76,10 @@ def classify_upload():
   resultFilename = process_image(image)
   #send it back
   return send_file(resultFilename, mimetype='image/png', as_attachment=True, attachment_filename='hackrued.png')
+
+@app.route('/templates/<path:path>')
+def send_static(path):
+    return send_from_directory('templates', path)
 
 if __name__ == '__main__':
   port = int(os.environ.get("PORT", 8000))
